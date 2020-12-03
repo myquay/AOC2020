@@ -21,6 +21,7 @@ namespace AOC2020.ConsoleApp.Services
             var questionDataFile = id switch
             {
                 QuestionIds.QuestionDayOne => "q01.txt",
+                QuestionIds.QuestionDayTwo => "q02.txt",
                 _ => throw new ArgumentException($"Data provider does not support problem '{id}'")
             };
 
