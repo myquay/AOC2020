@@ -2,8 +2,9 @@
 {
     public enum QuestionIds
     {
-        QuestionDayOne,
-        QuestionDayTwo,
-        QuestionDayThree
+        QuestionDay01,
+        QuestionDay02,
+        QuestionDay03,
+        QuestionDay04
     }
 }

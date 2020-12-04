@@ -9,19 +9,19 @@ using Xunit;
 
 namespace AOC2020.Tests
 {
-    public class SolveAdventDayThreeCommandTests
+    public class SolveAdventDay03CommandTests
     {
         [Fact]
         public async Task CanSolveProblem03Async()
         {
             var dataService = new Mock<IProblemDataService>();
 
-            dataService.Setup(a => a.GetDataForProblemAsync(It.Is<QuestionIds>(s => s == QuestionIds.QuestionDayThree)))
+            dataService.Setup(a => a.GetDataForProblemAsync(It.Is<QuestionIds>(s => s == QuestionIds.QuestionDay03)))
                 .Returns(Task.FromResult("..##.......\n#...#...#..\n.#....#..#.\n..#.#...#.#\n.#...##..#.\n..#.##.....\n.#.#.#....#\n.#........#\n#.##...#...\n#...##....#\n.#..#...#.#"));
 
-            var solver = new SolveAdventDayThreeCommandHandler(Mock.Of<ILogger<SolveAdventDayThreeCommand>>(), dataService.Object);
+            var solver = new SolveAdventDay03CommandHandler(Mock.Of<ILogger<SolveAdventDay03Command>>(), dataService.Object);
 
-            var result = await solver.Handle(new SolveAdventDayThreeCommand(), CancellationToken.None);
+            var result = await solver.Handle(new SolveAdventDay03Command(), CancellationToken.None);
 
             Assert.Equal("7", result.PartA);
             Assert.Equal("336", result.PartB);

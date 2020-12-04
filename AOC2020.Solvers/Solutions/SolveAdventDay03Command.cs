@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AOC2020.Solvers.Solutions
 {
-    public class SolveAdventDayThreeCommand : ISolveProblemCommand
+    public class SolveAdventDay03Command : ISolveProblemCommand
     {
         public int Day => 3;
 
@@ -19,13 +19,13 @@ namespace AOC2020.Solvers.Solutions.Handlers
     /// <summary>
     /// Implementation to solve day one
     /// </summary>
-    public class SolveAdventDayThreeCommandHandler : IRequestHandler<SolveAdventDayThreeCommand, ProblemSolution>
+    public class SolveAdventDay03CommandHandler : IRequestHandler<SolveAdventDay03Command, ProblemSolution>
     {
         private readonly ILogger log;
         private readonly IProblemDataService dataService;
 
-        public SolveAdventDayThreeCommandHandler(
-            ILogger<SolveAdventDayThreeCommand> log,
+        public SolveAdventDay03CommandHandler(
+            ILogger<SolveAdventDay03Command> log,
             IProblemDataService dataService)
         {
             this.log = log;
@@ -38,9 +38,9 @@ namespace AOC2020.Solvers.Solutions.Handlers
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public async Task<ProblemSolution> Handle(SolveAdventDayThreeCommand request, CancellationToken cancellationToken)
+        public async Task<ProblemSolution> Handle(SolveAdventDay03Command request, CancellationToken cancellationToken)
         {
-            var treeMap = (await dataService.GetDataForProblemAsync(QuestionIds.QuestionDayThree)).Split('\n').Select(n => n.Where(a => a == '.' || a == '#').Select(a => a == '.' ? false : true).ToArray()).ToArray();
+            var treeMap = (await dataService.GetDataForProblemAsync(QuestionIds.QuestionDay03)).Split('\n').Select(n => n.Where(a => a == '.' || a == '#').Select(a => a == '.' ? false : true).ToArray()).ToArray();
 
             var candidateSlopes = new[]
             {

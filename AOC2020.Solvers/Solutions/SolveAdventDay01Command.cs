@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AOC2020.Solvers.Solutions
 {
-    public class SolveAdventDayOneCommand : ISolveProblemCommand
+    public class SolveAdventDay01Command : ISolveProblemCommand
     {
         public int Day => 1;
 
@@ -20,13 +20,13 @@ namespace AOC2020.Solvers.Solutions.Handlers
     /// <summary>
     /// Implementation to solve day one
     /// </summary>
-    public class SolveAdventDayOneCommandHandler : IRequestHandler<SolveAdventDayOneCommand, ProblemSolution>
+    public class SolveAdventDay01CommandHandler : IRequestHandler<SolveAdventDay01Command, ProblemSolution>
     {
         private readonly ILogger log;
         private readonly IProblemDataService dataService;
 
-        public SolveAdventDayOneCommandHandler(
-            ILogger<SolveAdventDayOneCommand> log,
+        public SolveAdventDay01CommandHandler(
+            ILogger<SolveAdventDay01Command> log,
             IProblemDataService dataService)
         {
             this.log = log;
@@ -39,9 +39,9 @@ namespace AOC2020.Solvers.Solutions.Handlers
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public async Task<ProblemSolution> Handle(SolveAdventDayOneCommand request, CancellationToken cancellationToken)
+        public async Task<ProblemSolution> Handle(SolveAdventDay01Command request, CancellationToken cancellationToken)
         {
-            var data = (await dataService.GetDataForProblemAsync(QuestionIds.QuestionDayOne)).Split('\n').Select(a => int.Parse(a));
+            var data = (await dataService.GetDataForProblemAsync(QuestionIds.QuestionDay01)).Split('\n').Select(a => int.Parse(a));
 
             var datasetA = data.SelectMany(a => data, (a, b) => new { A = a, B = b });
             var datasetB = datasetA.SelectMany(a => data, (a, b) => new { a.A, a.B, C = b });

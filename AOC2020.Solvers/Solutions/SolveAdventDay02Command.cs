@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AOC2020.Solvers.Solutions
 {
-    public class SolveAdventDayTwoCommand : ISolveProblemCommand
+    public class SolveAdventDay02Command : ISolveProblemCommand
     {
         public int Day => 2;
 
@@ -22,13 +22,13 @@ namespace AOC2020.Solvers.Solutions.Handlers
     /// <summary>
     /// Implementation to solve day one
     /// </summary>
-    public class SolveAdventDayTwoCommandHandler : IRequestHandler<SolveAdventDayTwoCommand, ProblemSolution>
+    public class SolveAdventDay02CommandHandler : IRequestHandler<SolveAdventDay02Command, ProblemSolution>
     {
         private readonly ILogger log;
         private readonly IProblemDataService dataService;
 
-        public SolveAdventDayTwoCommandHandler(
-            ILogger<SolveAdventDayTwoCommand> log,
+        public SolveAdventDay02CommandHandler(
+            ILogger<SolveAdventDay02Command> log,
             IProblemDataService dataService)
         {
             this.log = log;
@@ -41,9 +41,9 @@ namespace AOC2020.Solvers.Solutions.Handlers
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public async Task<ProblemSolution> Handle(SolveAdventDayTwoCommand request, CancellationToken cancellationToken)
+        public async Task<ProblemSolution> Handle(SolveAdventDay02Command request, CancellationToken cancellationToken)
         {
-            var data = (await dataService.GetDataForProblemAsync(QuestionIds.QuestionDayTwo)).Split('\n')
+            var data = (await dataService.GetDataForProblemAsync(QuestionIds.QuestionDay02)).Split('\n')
                 .Select(a =>
                 {
                     var match = Regex.Match(a, @"(\d*)[\-]{1}(\d*)\s{1}([a-z]){1}[\:\s]{2}([a-z]*)");

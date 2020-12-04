@@ -2,10 +2,8 @@
 using MediatR;
 using Microsoft.Extensions.Hosting;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -47,6 +45,7 @@ namespace AOC2020.ConsoleApp
                         if (allSolvers.ContainsKey(day))
                         {
                             var solution = await mediator.Send(allSolvers[day]);
+                            Console.WriteLine(allSolvers[day].ProblemTitle);
                             Console.WriteLine($"Result: {solution.PartA}, {solution.PartB}");
                         }
                         else
