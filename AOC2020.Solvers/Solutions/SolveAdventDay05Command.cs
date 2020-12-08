@@ -83,7 +83,7 @@ namespace AOC2020.Solvers.Solutions.Handlers
             return new ProblemSolution
             {
                 PartA = $"{seatNumbers.Select(s => s.SeatId).Max()}",
-                PartB = $"{seatIds.Zip(seatIds.Skip(1)).Single(a => a.Second - a.First > 1).First + 1}",
+                PartB = $"{seatIds.Zip(seatIds.Skip(1)).First(a => a.Second - a.First > 1).First + 1}",
             };
         }
 
