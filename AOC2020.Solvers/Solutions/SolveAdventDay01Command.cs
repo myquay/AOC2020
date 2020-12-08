@@ -1,6 +1,5 @@
 ﻿using MediatR;
 using Microsoft.Extensions.Logging;
-using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -34,7 +33,7 @@ namespace AOC2020.Solvers.Solutions.Handlers
         }
 
         /// <summary>
-        /// Day one solver
+        /// Solver
         /// </summary>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>

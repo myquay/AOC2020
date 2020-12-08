@@ -5,6 +5,7 @@
         QuestionDay01,
         QuestionDay02,
         QuestionDay03,
-        QuestionDay04
+        QuestionDay04,
+        QuestionDay05
     }
 }

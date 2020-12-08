@@ -24,6 +24,7 @@ namespace AOC2020.ConsoleApp.Services
                 QuestionIds.QuestionDay02 => "q02.txt",
                 QuestionIds.QuestionDay03 => "q03.txt",
                 QuestionIds.QuestionDay04 => "q04.txt",
+                QuestionIds.QuestionDay05 => "q05.txt",
                 _ => throw new ArgumentException($"Data provider does not support problem '{id}'")
             };
 

@@ -19,7 +19,7 @@ namespace AOC2020.Solvers.Solutions
 namespace AOC2020.Solvers.Solutions.Handlers
 {
     /// <summary>
-    /// Implementation to solve day one
+    /// Implementation to solve day four
     /// </summary>
     public class SolveAdventDay04CommandHandler : IRequestHandler<SolveAdventDay04Command, ProblemSolution>
     {
@@ -35,7 +35,7 @@ namespace AOC2020.Solvers.Solutions.Handlers
         }
 
         /// <summary>
-        /// Day one solver
+        /// Solver
         /// </summary>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>

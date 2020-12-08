@@ -1,7 +1,5 @@
-﻿
-using MediatR;
+﻿using MediatR;
 using Microsoft.Extensions.Logging;
-using System;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading;
@@ -20,7 +18,7 @@ namespace AOC2020.Solvers.Solutions
 namespace AOC2020.Solvers.Solutions.Handlers
 {
     /// <summary>
-    /// Implementation to solve day one
+    /// Implementation to solve day two
     /// </summary>
     public class SolveAdventDay02CommandHandler : IRequestHandler<SolveAdventDay02Command, ProblemSolution>
     {
@@ -36,7 +34,7 @@ namespace AOC2020.Solvers.Solutions.Handlers
         }
 
         /// <summary>
-        /// Day one solver
+        /// Solver
         /// </summary>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
