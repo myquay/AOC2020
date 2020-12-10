@@ -19,7 +19,7 @@ FFFBBBFRRR
 BBFFBBFRLL";
 
         [Fact]
-        public async Task CanSolveProblem04ParkAAsync()
+        public async Task CanSolveProblem05Async()
         {
             var dataService = new Mock<IProblemDataService>();
 

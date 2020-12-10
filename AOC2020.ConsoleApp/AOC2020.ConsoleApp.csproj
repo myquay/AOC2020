@@ -11,9 +11,13 @@
     <None Remove="Data\q03.txt" />
     <None Remove="Data\q04.txt" />
     <None Remove="Data\q05.txt" />
+    <None Remove="Data\q06.txt" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Data\q06.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Data\q05.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
